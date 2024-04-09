@@ -1,0 +1,116 @@
+body {
+  background-color: rgb(61, 14, 14);
+  color: whitesmoke;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+#start {
+  min-height: 35em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#start button {
+  margin: 0 10vw;
+}
+
+#game {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#board {
+  position: relative;
+}
+.grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  width: 90vw;
+  max-width: 60vh;
+  height: 90vw;
+  max-height: 60vh;
+  margin: 0 auto;
+  margin-top: 2em;
+  gap: 1px;
+}
+.grid.first-grid {
+  position: relative;
+}
+.cell {
+  background-color: gray;
+  border: 1px solid black;
+}
+.hit {
+  background-color: rgb(43, 43, 43);
+}
+.miss {
+  background-color: rgb(47, 47, 213);
+}
+#highlight {
+  background-color: rgba(61, 14, 14, 0.6);
+}
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+}
+#info {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1em;
+  margin: 1em;
+  border-radius: 10px;
+  border: 5px solid rgba(0, 0, 0, 0.5);
+}
+h1#status {
+  margin: 0;
+}
+#manual-start, #ships-remaining {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#manual-start button, #ships-remaining div {
+  margin: 0.5em;
+  min-width: 10em;
+}
+#sidebar #buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+#buttons button {
+  width: 8em;
+}
+
+#credits button {
+  padding: 0 10vw;
+}
+p {
+  padding: 0 16px;
+}
+
+#how-to-play h2 {
+  margin-top: 0;
+  padding-top: 20px;
+}
+span.hit,
+span.miss {
+  border: 2px solid black;
+}
+
+@media (min-aspect-ratio: 313 / 337) {
+  #manual-start, #ships-remaining {
+    flex-direction: column;
+  }
+}

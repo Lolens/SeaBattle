@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Морской бой</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <script src="cells.js" defer></script>
+    <script src="app.js" defer></script>
+    <script>
+      window.onload = function() {
+        go(false);
+      };
+    </script>
+  </head>
+
+  <body>
+    <div id="start">
+    </div>
+    <div id="game" class="start-hidden">
+      <div id="board"></div>
+      <div id="sidebar">
+        <div id="info">
+          <div><h1 id="status"></h1></div>
+          <div id="turns-container" class="start-hidden">
+            Turns: <span id="turns">-1</span>
+          </div>
+          <div id="manual-start" class="start-hidden"></div>
+          <div id="ships-remaining" class="start-hidden">
+            <div>
+              2 tile ships: <span id="two-tile" class="ship-count">0</span>
+            </div>
+            <div>
+              3 tile ships: <span id="three-tile" class="ship-count">0</span>
+            </div>
+            <div>
+              4 tile ships: <span id="four-tile" class="ship-count">0</span>
+            </div>
+            <div>
+              5 tile ships: <span id="five-tile" class="ship-count">0</span>
+            </div>
+          </div>
+        </div>
+        <div id="buttons">
+          <button class="start-hidden" id="manual-done" disabled>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="modals">
+      <div class="modal" id="modal-ship-destroyed">
+        <div class="modal-bg modal-exit"></div>
+        <div class="modal-container">
+          <h2>Корабль потоплен!</h2>
+          <button class="modal-close modal-exit">X</button>
+        </div>
+      </div>
+      <div class="modal" id="modal-win">
+        <div class="modal-bg modal-exit"></div>
+        <div class="modal-container">
+          <h1>Победа!!</h1>
+          <h2>Вы потопили все корабли!</h2>
+          <button class="modal-close modal-exit">X</button>
+        </div>
+      </div>
+      <div class="modal" id="modal-lose">
+        <div class="modal-bg modal-exit"></div>
+        <div class="modal-container">
+          <h1>Поражение!</h1>
+          <h2>Закончились ходы!</h2>
+          <button class="modal-close modal-exit">X</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
